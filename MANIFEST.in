@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include advika_enterprises *.css
+recursive-include advika_enterprises *.csv
+recursive-include advika_enterprises *.html
+recursive-include advika_enterprises *.ico
+recursive-include advika_enterprises *.js
+recursive-include advika_enterprises *.json
+recursive-include advika_enterprises *.md
+recursive-include advika_enterprises *.png
+recursive-include advika_enterprises *.py
+recursive-include advika_enterprises *.svg
+recursive-include advika_enterprises *.txt
+recursive-exclude advika_enterprises *.pyc
