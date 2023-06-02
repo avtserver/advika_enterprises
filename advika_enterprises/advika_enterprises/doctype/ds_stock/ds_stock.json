@@ -1,0 +1,102 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{item_code}-{date_of_transaction}",
+ "creation": "2023-06-02 22:09:29.236475",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "item_name",
+  "available_stock",
+  "add_stock",
+  "sold_stock",
+  "sales_order_no",
+  "date_of_transaction",
+  "remarks",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "label": "Item Code",
+   "options": "Item"
+  },
+  {
+   "fetch_from": "item_code.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name"
+  },
+  {
+   "fieldname": "available_stock",
+   "fieldtype": "Float",
+   "label": "Available Stock"
+  },
+  {
+   "fieldname": "add_stock",
+   "fieldtype": "Float",
+   "label": "Add Stock"
+  },
+  {
+   "fieldname": "sales_order_no",
+   "fieldtype": "Data",
+   "label": "Sales order no"
+  },
+  {
+   "fieldname": "date_of_transaction",
+   "fieldtype": "Data",
+   "label": "Date of transaction"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "DS Stock",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "sold_stock",
+   "fieldtype": "Float",
+   "label": "Sold Stock"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-06-02 22:41:17.207463",
+ "modified_by": "Administrator",
+ "module": "Advika Enterprises",
+ "name": "DS Stock",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "item_name",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "item_code"
+}
