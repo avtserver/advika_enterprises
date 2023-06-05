@@ -109,6 +109,21 @@ app_license = "MIT"
 #		"on_trash": "method"
 #	}
 # }
+# hooks.py
+doc_events = {
+    "Sales Order": {
+        "on_submit": "advika_enterprises.advika_enterprises.doctype.ds_stock_transaction.ds_stock_transaction.create_from_sales_order",
+        "on_cancel": "advika_enterprises.advika_enterprises.doctype.ds_stock_transaction.ds_stock_transaction.create_cancelled_stock_entry"
+
+    },
+   "Item": {
+        "after_insert": "advika_enterprises.advika_enterprises.doctype.ds_stock.ds_stock.create_ds_stock_from_item",
+    }
+}
+
+
+
+
 
 # Scheduled Tasks
 # ---------------

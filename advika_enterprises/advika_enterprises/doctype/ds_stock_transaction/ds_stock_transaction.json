@@ -19,8 +19,10 @@
   "sold_stock",
   "add_stock",
   "section_break_tnhz",
-  "sales_invoice_ref",
+  "sales_order_ref",
   "column_break_cake",
+  "transaction_type",
+  "entry_by",
   "remarks"
  ],
  "fields": [
@@ -31,11 +33,13 @@
    "options": "DS Stock"
   },
   {
+   "depends_on": "eval:doc.type_of_entry == \"Add Stock\"\n",
    "fieldname": "add_stock",
    "fieldtype": "Float",
    "label": "Add Stock"
   },
   {
+   "depends_on": "eval:doc.type_of_entry == \"Sold Stock\"\n",
    "fieldname": "sold_stock",
    "fieldtype": "Float",
    "label": "Sold Stock"
@@ -44,14 +48,10 @@
    "fieldname": "type_of_entry",
    "fieldtype": "Select",
    "label": "Type of entry",
-   "options": "Add Stock\nSold Stock"
+   "options": "\nAdd Stock\nSold Stock"
   },
   {
-   "fieldname": "sales_invoice_ref",
-   "fieldtype": "Data",
-   "label": "Sales Invoice(Ref)"
-  },
-  {
+   "depends_on": "item_code",
    "fieldname": "date_of_transaction",
    "fieldtype": "Date",
    "label": "Date of transaction"
@@ -91,11 +91,31 @@
    "fieldname": "h1supplier_stock_transaction_entryh1_section",
    "fieldtype": "Section Break",
    "label": "<h2>Supplier Stock Transaction Entry</h2>"
+  },
+  {
+   "default": "NA",
+   "depends_on": "eval:doc.type_of_entry == \"Sold Stock\"\n",
+   "fieldname": "sales_order_ref",
+   "fieldtype": "Data",
+   "label": "Sales order(Ref)"
+  },
+  {
+   "fieldname": "transaction_type",
+   "fieldtype": "Select",
+   "label": "Transaction Type",
+   "options": "\nInitial Stock\nAdd Stock\nRevoke Stock\nSubmitted sales order\nCancelled sales order"
+  },
+  {
+   "default": "Supplier",
+   "fieldname": "entry_by",
+   "fieldtype": "Select",
+   "label": "Entry By",
+   "options": "Supplier\nSystem flow"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-02 23:50:46.735093",
+ "modified": "2023-06-05 17:20:17.953139",
  "modified_by": "Administrator",
  "module": "Advika Enterprises",
  "name": "DS Stock Transaction",

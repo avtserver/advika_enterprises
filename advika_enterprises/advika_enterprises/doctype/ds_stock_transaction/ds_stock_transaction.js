@@ -6,7 +6,7 @@
 
 // 	},
 // });
-
+// --------------------------------------------
 frappe.ui.form.on('DS Stock Transaction', {
     item_code: function(frm) {
         if(frm.doc.item_code){
@@ -59,5 +59,35 @@ frappe.ui.form.on('DS Stock Transaction', {
                 });
             }
         }, 100);
+    }
+});
+
+
+//addition conditions
+
+
+// Inside ds_stock_transaction.js
+
+frappe.ui.form.on('DS Stock Transaction', {
+    type_of_entry: function(frm) {
+        if (frm.doc.type_of_entry == 'Add Stock') {
+            frm.set_value('transaction_type', 'Add Stock');
+        } else if (frm.doc.type_of_entry == 'Sold Stock') {
+            frm.set_value('transaction_type', 'Revoke Stock');
+        }
+    }
+});
+
+
+frappe.ui.form.on('DS Stock Transaction', {
+    onload: function(frm) {
+        // Hide the transaction_type field when the form is loaded
+        frm.toggle_display('Sales_order_ref', false);
+    },
+    type_of_entry: function(frm) {
+        if (frm.doc.type_of_entry == 'Sold Stock') {
+         }
+        // Show the transaction_type field when type_of_entry field has a value
+        frm.toggle_display('Sales_order_ref', true);
     }
 });
