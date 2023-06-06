@@ -1,3 +1,5 @@
+
+
 <div class="page-content">
     <h1>Welcome to the Dropship Dashboard!</h1>
     <p>This is a placeholder text for your dashboard.</p>
@@ -20,12 +22,27 @@
     <br>
     <br>
     
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-md-3">
         <input type="text" id="search-ds-stock" placeholder="Search DS Stock" class="form-control">
       </div>
-    </div>
+    </div> -->
     
+    <div class="row">
+        <div class="col-md-3">
+          <div class="input-group search">
+            <span class="input-group-prepend">
+              <div class="input-group-text">
+                <i class="fa fa-search"></i>
+              </div>
+            </span>
+            <input type="text" id="search-ds-stock" placeholder="Search DS Stock" class="form-control">
+          </div>
+        </div>
+      </div>
+      
+
+
     <div class="row">
       <div class="col-md-12">
         <table id="ds-stock-list" class="table table-striped">
@@ -36,7 +53,7 @@
               <th>Item Name</th>
               <th>Item Code</th>
               <th>Available Stock</th>
-              <th>Last Update Date</th>
+              <th>Last Update</th>
             </tr>
           </thead>
           <tbody>

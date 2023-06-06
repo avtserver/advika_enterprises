@@ -112,8 +112,25 @@ app_license = "MIT"
 # hooks.py
 doc_events = {
     "Sales Order": {
-        "on_submit": "advika_enterprises.advika_enterprises.doctype.ds_stock_transaction.ds_stock_transaction.create_from_sales_order",
-        "on_cancel": "advika_enterprises.advika_enterprises.doctype.ds_stock_transaction.ds_stock_transaction.create_cancelled_stock_entry"
+        "on_submit": [
+            "advika_enterprises.advika_enterprises.doctype.ds_stock_transaction.ds_stock_transaction.create_from_sales_order",
+            "advika_enterprises.advika_enterprises.doctype.ds_order_delivery_status.ds_order_delivery_status.create_status_and_log"
+        ]
+    },
+    "Sales Invoice": {
+        "on_submit": "advika_enterprises.advika_enterprises.doctype.ds_order_delivery_status.ds_order_delivery_status.update_status_and_log"
+    },
+    "Purchase Order": {
+        "on_submit": "advika_enterprises.advika_enterprises.doctype.ds_order_delivery_status.ds_order_delivery_status.update_status_and_log_on_po_submit"
+    },
+    "Purchase Invoice": {
+        "on_submit": [
+            "advika_enterprises.advika_enterprises.doctype.ds_order_delivery_status.ds_order_delivery_status.update_status_and_log_on_pi_submit",
+            "advika_enterprises.advika_enterprises.doctype.ds_order_delivery_status.ds_order_delivery_status.create_delivery_boy_status_on_pi_submit"
+        ]
+    },
+    "Delivery Boy Status": {
+        "on_update": "advika_enterprises.advika_enterprises.doctype.ds_order_delivery_status.ds_order_delivery_status.update_ds_order_delivery_status_on_db_save"
 
     },
    "Item": {

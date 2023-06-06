@@ -1,79 +1,70 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:{TR}-{#######}",
  "creation": "2023-06-05 19:26:24.676988",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "order_reference",
-  "item_code",
-  "item_name",
-  "customer",
-  "delivery_status",
-  "last_updated",
-  "purchase_order_reference",
-  "comments",
-  "tracking_number"
+  "sales_order",
+  "purchase_order",
+  "purchase_invoice",
+  "ds_order_status",
+  "status_updated_on",
+  "comment",
+  "status_logs"
  ],
  "fields": [
   {
-   "fieldname": "order_reference",
+   "fieldname": "sales_order",
    "fieldtype": "Link",
-   "label": "Order Reference",
+   "label": "Sales order",
    "options": "Sales Order"
   },
   {
-   "fieldname": "item_code",
+   "fieldname": "purchase_order",
    "fieldtype": "Link",
-   "label": "Item Code",
-   "options": "Item"
+   "label": "Purchase Order",
+   "options": "Purchase Order"
   },
   {
-   "fieldname": "item_name",
-   "fieldtype": "Data",
-   "label": "Item Name"
-  },
-  {
-   "fieldname": "customer",
-   "fieldtype": "Link",
-   "label": "Customer",
-   "options": "Customer"
-  },
-  {
-   "fieldname": "delivery_status",
+   "fieldname": "ds_order_status",
    "fieldtype": "Select",
-   "label": "Delivery Status",
-   "options": "Pending Supplier Confirmation\nShipped From Supplier\nDelivered to Customer\nReturned"
+   "label": "DS Order Status",
+   "options": "Pending\nPaid\nSupplier Received Order\nItem shipped by Supplier\nItem has been picked up by Delivery Boy\nItem is out for delivery\nItem has been delivered\nReturn Initiated\nReturned to Supplier"
   },
   {
-   "fieldname": "last_updated",
-   "fieldtype": "Date",
-   "label": "Last Updated"
+   "fieldname": "status_updated_on",
+   "fieldtype": "Datetime",
+   "label": "Status Updated On"
   },
   {
-   "fieldname": "purchase_order_reference",
-   "fieldtype": "Data",
-   "label": "Purchase Order Reference"
+   "fieldname": "comment",
+   "fieldtype": "Small Text",
+   "label": "Comment"
   },
   {
-   "fieldname": "comments",
-   "fieldtype": "Data",
-   "label": "Comments"
+   "fieldname": "status_logs",
+   "fieldtype": "Table",
+   "label": "Status Logs",
+   "options": "DS Order Status Log"
   },
   {
-   "fieldname": "tracking_number",
-   "fieldtype": "Data",
-   "label": "Tracking Number"
+   "fieldname": "purchase_invoice",
+   "fieldtype": "Link",
+   "label": "Purchase Invoice",
+   "options": "Purchase Invoice"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-05 19:26:41.390073",
+ "modified": "2023-06-07 00:28:28.990439",
  "modified_by": "Administrator",
  "module": "Advika Enterprises",
  "name": "DS Order Delivery Status",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -85,6 +76,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "DS Supplier",
    "share": 1,
    "write": 1
   }

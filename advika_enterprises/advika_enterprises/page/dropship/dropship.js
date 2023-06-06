@@ -13,7 +13,7 @@ frappe.pages['dropship'].on_page_load = function(wrapper) {
 		method: "frappe.client.get_list",
 		args: {
 			doctype: "DS Stock",
-			fields: ["name", "item_name", "item_code", "available_stock", "creation"],
+			fields: ["name", "item_name", "item_code", "available_stock", "modified"],
 		},
 		callback: function(r) {
 			var html = '';
@@ -26,7 +26,7 @@ frappe.pages['dropship'].on_page_load = function(wrapper) {
 			
 			$.each(r.message || [], function(i, d) {
 				// Convert creation date to DD/MM/YYYY format
-				let creation_date = frappe.datetime.str_to_user(d.creation);
+				let creation_date = frappe.datetime.str_to_user(d.modified);
 	
 				html += `<tr>
 						   <td>${i+1}</td>

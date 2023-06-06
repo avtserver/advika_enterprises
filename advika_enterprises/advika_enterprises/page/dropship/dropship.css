@@ -17,3 +17,7 @@
     width: 100%;
     margin-bottom: 1rem;
 }
+.search{
+    border: 1px solid #000;
+    border-radius: .5rem;
+}
