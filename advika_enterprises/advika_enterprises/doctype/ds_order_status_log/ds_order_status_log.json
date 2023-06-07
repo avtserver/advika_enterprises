@@ -26,14 +26,14 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Previous Status",
-   "options": "Pending\nPaid\nSupplier Received Order\nItem shipped by Supplier\nItem has been picked up by Delivery Boy\nItem is out for delivery\nItem has been delivered\nReturn Initiated\nReturned to Supplier"
+   "options": "Order Placed\nPending\nInvoice Issued, Awaiting Payment\nPaid\nunpaid\nPOD\nOrder Processed\nOrder cancelled by Supplier\nOrder in hold\nSupplier Received Order\nOrder Ready for Pickup\nItem has been picked up by Delivery Boy\nItem is out for delivery\nItem has been delivered\nReturn Initiated\nReturned to Supplier"
   },
   {
    "fieldname": "new_status",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "New Status",
-   "options": "Pending\nPaid\nSupplier Received Order\nItem shipped by Supplier\nItem has been picked up by Delivery Boy\nItem is out for delivery\nItem has been delivered\nReturn Initiated\nReturned to Supplier"
+   "options": "Pending\nInvoice Issued, Awaiting Payment\nPaid\nunpaid\nPOD\nOrder Processed\nOrder cancelled by Supplier\nOrder in hold\nSupplier Received Order\nOrder Ready for Pickup\nItem has been picked up by Delivery Boy\nItem is out for delivery\nItem has been delivered\nReturn Initiated\nReturned to Supplier"
   },
   {
    "fieldname": "change_time",
@@ -62,7 +62,7 @@
    "link_fieldname": "sales_order"
   }
  ],
- "modified": "2023-06-07 00:28:59.190824",
+ "modified": "2023-06-08 01:32:04.641446",
  "modified_by": "Administrator",
  "module": "Advika Enterprises",
  "name": "DS Order Status Log",

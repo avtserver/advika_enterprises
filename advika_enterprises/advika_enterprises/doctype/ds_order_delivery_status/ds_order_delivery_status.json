@@ -9,6 +9,7 @@
  "engine": "InnoDB",
  "field_order": [
   "sales_order",
+  "sales_invoice",
   "purchase_order",
   "purchase_invoice",
   "ds_order_status",
@@ -33,7 +34,7 @@
    "fieldname": "ds_order_status",
    "fieldtype": "Select",
    "label": "DS Order Status",
-   "options": "Pending\nPaid\nSupplier Received Order\nItem shipped by Supplier\nItem has been picked up by Delivery Boy\nItem is out for delivery\nItem has been delivered\nReturn Initiated\nReturned to Supplier"
+   "options": "Pending\nInvoice Issued, Awaiting Payment\nPaid\nunpaid\nPOD\nOrder Processed\nOrder cancelled by Supplier\nOrder in hold\nSupplier Received Order\nOrder Ready for Pickup\nItem has been picked up by Delivery Boy\nItem is out for delivery\nItem has been delivered\nReturn Initiated\nReturned to Supplier"
   },
   {
    "fieldname": "status_updated_on",
@@ -56,11 +57,17 @@
    "fieldtype": "Link",
    "label": "Purchase Invoice",
    "options": "Purchase Invoice"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "options": "Sales Invoice"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-07 00:28:28.990439",
+ "modified": "2023-06-08 01:31:28.921408",
  "modified_by": "Administrator",
  "module": "Advika Enterprises",
  "name": "DS Order Delivery Status",
@@ -88,6 +95,17 @@
    "read": 1,
    "report": 1,
    "role": "DS Supplier",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Delivery Boy",
    "share": 1,
    "write": 1
   }

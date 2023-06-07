@@ -9,6 +9,8 @@
  "field_order": [
   "purchase_order",
   "purchase_invoice",
+  "sales_order",
+  "sales_invoice",
   "delivery_boy",
   "ds_db_status_update",
   "amended_from"
@@ -30,7 +32,7 @@
    "fieldname": "delivery_boy",
    "fieldtype": "Link",
    "label": "Delivery Boy",
-   "options": "User"
+   "options": "Delivery Boy"
   },
   {
    "fieldname": "ds_db_status_update",
@@ -46,12 +48,24 @@
    "options": "Delivery Boy Status",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "label": "Sales Order",
+   "options": "Sales Order"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "options": "Sales Invoice"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-06-07 00:59:01.245699",
+ "modified": "2023-06-08 01:39:39.577920",
  "modified_by": "Administrator",
  "module": "Advika Enterprises",
  "name": "Delivery Boy Status",
@@ -66,6 +80,30 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "DS Supplier",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Delivery Boy",
    "share": 1,
    "write": 1
   }

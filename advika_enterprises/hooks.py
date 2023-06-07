@@ -118,11 +118,23 @@ doc_events = {
         ]
     },
     "Sales Invoice": {
-        "on_submit": "advika_enterprises.advika_enterprises.doctype.ds_order_delivery_status.ds_order_delivery_status.update_status_and_log"
+        "on_submit": [
+            "advika_enterprises.advika_enterprises.doctype.ds_order_delivery_status.ds_order_delivery_status.update_status_and_log",
+            "advika_enterprises.advika_enterprises.doctype.ds_order_delivery_status.ds_order_delivery_status.add_entry_to_ds_order_payment_status",
+        ]     
+    },
+    "Payment Entry": {
+        "on_submit": "advika_enterprises.advika_enterprises.doctype.ds_order_delivery_status.ds_order_delivery_status.update_status_on_payment_entry_submit"
     },
     "Purchase Order": {
-        "on_submit": "advika_enterprises.advika_enterprises.doctype.ds_order_delivery_status.ds_order_delivery_status.update_status_and_log_on_po_submit"
-    },
+        "on_submit": [
+            "advika_enterprises.advika_enterprises.doctype.ds_order_delivery_status.ds_order_delivery_status.create_supplier_order_confirmation_on_po_submit",
+            "advika_enterprises.advika_enterprises.doctype.ds_order_delivery_status.ds_order_delivery_status.update_status_and_log_on_po_submit"
+        ]
+        },
+    "Supplier Order Confirmation": {
+        "on_submit": "advika_enterprises.advika_enterprises.doctype.ds_order_delivery_status.ds_order_delivery_status.update_ds_order_status_on_soc_submit"
+        },
     "Purchase Invoice": {
         "on_submit": [
             "advika_enterprises.advika_enterprises.doctype.ds_order_delivery_status.ds_order_delivery_status.update_status_and_log_on_pi_submit",
