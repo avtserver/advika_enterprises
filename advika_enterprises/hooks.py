@@ -118,11 +118,10 @@ doc_events = {
         ]
     },
     "Sales Invoice": {
-        "on_submit": [
-            "advika_enterprises.advika_enterprises.doctype.ds_order_delivery_status.ds_order_delivery_status.update_status_and_log",
-            "advika_enterprises.advika_enterprises.doctype.ds_order_delivery_status.ds_order_delivery_status.add_entry_to_ds_order_payment_status",
-        ]     
+        "on_submit": "advika_enterprises.advika_enterprises.doctype.ds_order_delivery_status.ds_order_delivery_status.update_status_and_log"   
     },
+    # "advika_enterprises.advika_enterprises.doctype.ds_order_delivery_status.ds_order_delivery_status.add_entry_to_ds_order_payment_status",
+    
     "Payment Entry": {
         "on_submit": "advika_enterprises.advika_enterprises.doctype.ds_order_delivery_status.ds_order_delivery_status.update_status_on_payment_entry_submit"
     },

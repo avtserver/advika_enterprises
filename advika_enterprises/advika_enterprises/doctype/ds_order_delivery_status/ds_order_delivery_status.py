@@ -97,25 +97,25 @@ def update_status_and_log(doc, method):
 
 # add current payment status from invoice to DS Order Payment Status doc
 
-@frappe.whitelist()
-def add_entry_to_ds_order_payment_status(doc, method):
-    # doc here represents the Sales Invoice document
+# @frappe.whitelist()
+# def add_entry_to_ds_order_payment_status(doc, method):
+#     # doc here represents the Sales Invoice document
 
-    # Retrieve the name of the sales order from the first item in the sales invoice
-    # Make sure all the items in your sales invoice belong to the same sales order
-    sales_order = doc.items[0].sales_order if doc.items else None
+#     # Retrieve the name of the sales order from the first item in the sales invoice
+#     # Make sure all the items in your sales invoice belong to the same sales order
+#     sales_order = doc.items[0].sales_order if doc.items else None
 
-    if sales_order:
-        # Create a new DS Order Payment Status document
-        ds_order_payment_status = frappe.new_doc('DS Order Payment Status')
-        ds_order_payment_status.sales_order = sales_order
-        ds_order_payment_status.sales_invoice = doc.name
-        ds_order_payment_status.insert()
+#     if sales_order:
+#         # Create a new DS Order Payment Status document
+#         ds_order_payment_status = frappe.new_doc('DS Order Payment Status')
+#         ds_order_payment_status.sales_order = sales_order
+#         ds_order_payment_status.sales_invoice = doc.name
+#         ds_order_payment_status.insert()
         
-        # Print a message
-        frappe.msgprint(_("DS Order Payment Status Updated for Sales Invoice {0}").format(doc.name))
-    else:
-        frappe.throw(_("Sales Order not found in Sales Invoice items."))
+#         # Print a message
+#         frappe.msgprint(_("DS Order Payment Status Updated for Sales Invoice {0}").format(doc.name))
+#     else:
+#         frappe.throw(_("Sales Order not found in Sales Invoice items."))
 
 
 
