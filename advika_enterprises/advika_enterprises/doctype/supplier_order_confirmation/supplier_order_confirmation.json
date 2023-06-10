@@ -1,4 +1,5 @@
 {
+ "_liked_by": "[\"Administrator\"]",
  "actions": [],
  "allow_rename": 1,
  "autoname": "field:purchase_order",
@@ -9,7 +10,7 @@
  "engine": "InnoDB",
  "field_order": [
   "purchase_order",
-  "purchase_invoice",
+  "link",
   "delivery_due_date",
   "status",
   "comment",
@@ -24,12 +25,6 @@
    "unique": 1
   },
   {
-   "fieldname": "purchase_invoice",
-   "fieldtype": "Link",
-   "label": "Purchase Invoice",
-   "options": "Purchase Invoice"
-  },
-  {
    "fetch_from": "purchase_order.schedule_date",
    "fieldname": "delivery_due_date",
    "fieldtype": "Data",
@@ -39,7 +34,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Approved\nCancelled\nHold"
+   "options": "\nApproved\nCancelled\nHold"
   },
   {
    "fieldname": "comment",
@@ -54,12 +49,19 @@
    "options": "Supplier Order Confirmation",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "depends_on": "purchase_order",
+   "fieldname": "link",
+   "fieldtype": "Link",
+   "label": "Purchase Order",
+   "options": "Purchase Order"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-06-08 01:18:04.796837",
+ "modified": "2023-06-09 18:10:16.456348",
  "modified_by": "Administrator",
  "module": "Advika Enterprises",
  "name": "Supplier Order Confirmation",
@@ -75,6 +77,18 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "DS Supplier",
    "share": 1,
    "write": 1
   }

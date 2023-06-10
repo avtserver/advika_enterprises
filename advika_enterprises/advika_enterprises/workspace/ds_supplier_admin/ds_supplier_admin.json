@@ -1,0 +1,35 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"XQugGO1LcL\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">DS Supplier Admin Workspace</span>\",\"col\":12}}]",
+ "creation": "2023-06-08 19:41:27.961045",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "equity",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "DS Supplier Admin",
+ "links": [],
+ "modified": "2023-06-08 19:50:42.196004",
+ "modified_by": "Administrator",
+ "module": "Advika Enterprises",
+ "name": "DS Supplier Admin",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Administrator"
+  },
+  {
+   "role": "DS Supplier"
+  }
+ ],
+ "sequence_id": 2.0,
+ "shortcuts": [],
+ "title": "DS Supplier Admin"
+}

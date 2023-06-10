@@ -173,6 +173,8 @@ def create_supplier_order_confirmation_on_po_submit(doc, method):
 
     # Set the purchase order field
     supplier_order_confirmation.purchase_order = doc.name
+    supplier_order_confirmation.link = doc.name
+
 
     # add comment "Approved the order after approved u will get the invoice"
     supplier_order_confirmation.comment = 'Approved the order after approved you will get the Purchase Invoice'
