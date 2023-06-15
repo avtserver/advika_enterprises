@@ -1,0 +1,55 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"dT6lf8eLDo\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">DS Delivery</span>\",\"col\":12}},{\"id\":\"MTP0I0sm0L\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Order Ready for pickup\",\"col\":3}},{\"id\":\"GzM1LX9YKD\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Items Received for Delivery\",\"col\":3}},{\"id\":\"pAXbdWefce\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Out for Delivery\",\"col\":3}},{\"id\":\"aiSkTQzlha\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Order Delivered\",\"col\":3}}]",
+ "creation": "2023-06-10 14:07:18.042114",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "hr",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "DS Delivery",
+ "links": [],
+ "modified": "2023-06-10 20:23:28.560031",
+ "modified_by": "Administrator",
+ "module": "Advika Enterprises",
+ "name": "DS Delivery",
+ "number_cards": [
+  {
+   "label": "Items Received for Delivery",
+   "number_card_name": "Received from Supplier"
+  },
+  {
+   "label": "Order Ready for pickup",
+   "number_card_name": "Delivery Order Received"
+  },
+  {
+   "label": "Order Delivered",
+   "number_card_name": "Order Delivered"
+  },
+  {
+   "label": "Out for Delivery",
+   "number_card_name": "Out for Delivery"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Delivery Boy"
+  },
+  {
+   "role": "Administrator"
+  },
+  {
+   "role": "DS Supplier"
+  }
+ ],
+ "sequence_id": 3.0,
+ "shortcuts": [],
+ "title": "DS Delivery"
+}

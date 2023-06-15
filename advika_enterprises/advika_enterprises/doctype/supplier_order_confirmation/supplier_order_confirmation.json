@@ -1,5 +1,4 @@
 {
- "_liked_by": "[\"Administrator\"]",
  "actions": [],
  "allow_rename": 1,
  "autoname": "field:purchase_order",
@@ -12,9 +11,10 @@
   "purchase_order",
   "link",
   "delivery_due_date",
-  "status",
+  "column_break_jpiv",
   "comment",
-  "amended_from"
+  "column_break_xrup",
+  "status"
  ],
  "fields": [
   {
@@ -38,17 +38,8 @@
   },
   {
    "fieldname": "comment",
-   "fieldtype": "Data",
+   "fieldtype": "Small Text",
    "label": "Comment"
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Supplier Order Confirmation",
-   "print_hide": 1,
-   "read_only": 1
   },
   {
    "depends_on": "purchase_order",
@@ -56,12 +47,20 @@
    "fieldtype": "Link",
    "label": "Purchase Order",
    "options": "Purchase Order"
+  },
+  {
+   "fieldname": "column_break_xrup",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jpiv",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-06-09 18:10:16.456348",
+ "modified": "2023-06-10 19:28:18.647256",
  "modified_by": "Administrator",
  "module": "Advika Enterprises",
  "name": "Supplier Order Confirmation",

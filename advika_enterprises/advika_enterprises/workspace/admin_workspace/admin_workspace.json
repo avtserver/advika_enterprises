@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"rMhUHS3zqb\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Sales order status summary</b></span>\",\"col\":12}},{\"id\":\"IvhzsDHlly\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Sales Order Received\",\"col\":3}},{\"id\":\"eIUopSFkNL\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Create Sales Invoice\",\"col\":3}},{\"id\":\"umW5HPN3y3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Create Purchase Order\",\"col\":4}},{\"id\":\"crm2yyzMvV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Create Purchase order\",\"col\":5}},{\"id\":\"2KCRq6tYw4\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"BxA6BFToCR\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Paid Order\",\"col\":3}},{\"id\":\"jdR-dKSWYm\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Payment Due\",\"col\":3}},{\"id\":\"IW94kGO9j6\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Supplier Order actions and summary</b></span>\",\"col\":12}},{\"id\":\"7mQtLLFdFA\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Order Received\",\"col\":6}},{\"id\":\"hvh2XiTiHk\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pending Order\",\"col\":6}},{\"id\":\"sdHx8TGYY-\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Order Processed\",\"col\":4}},{\"id\":\"qHkjJtUjMf\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Order Hold\",\"col\":4}},{\"id\":\"KMFn9EaqVT\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Order Cancelled\",\"col\":4}},{\"id\":\"ydPkhrv9BQ\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"_71saJ-TFJ\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>DS Order Delivery Status</b></span>\",\"col\":12}},{\"id\":\"6oEc1HuTb1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"DS Pending Order\",\"col\":3}},{\"id\":\"IEQYJCj18b\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Order Processed\",\"col\":3}},{\"id\":\"C5svRB4p-e\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ready Order for pickup\",\"col\":3}},{\"id\":\"NJQegiIBhR\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"mnyG6yH19s\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"DS Order In Transit \",\"col\":3}},{\"id\":\"5Ba7ysB2ow\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Order Delivered\",\"col\":3}}]",
+ "content": "[{\"id\":\"rMhUHS3zqb\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Sales order status summary</b></span>\",\"col\":12}},{\"id\":\"IvhzsDHlly\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Sales Order Received\",\"col\":3}},{\"id\":\"eIUopSFkNL\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Create Sales Invoice\",\"col\":3}},{\"id\":\"umW5HPN3y3\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Create Purchase Order\",\"col\":4}},{\"id\":\"2KCRq6tYw4\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"BxA6BFToCR\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Paid Order\",\"col\":3}},{\"id\":\"jdR-dKSWYm\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Payment Due\",\"col\":3}},{\"id\":\"oJsRgpphPe\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"IW94kGO9j6\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Supplier Order actions and summary</b></span>\",\"col\":12}},{\"id\":\"7mQtLLFdFA\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Order Received\",\"col\":6}},{\"id\":\"hvh2XiTiHk\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pending Order\",\"col\":6}},{\"id\":\"sdHx8TGYY-\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Order Processed\",\"col\":4}},{\"id\":\"qHkjJtUjMf\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Order Hold\",\"col\":4}},{\"id\":\"KMFn9EaqVT\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Order Cancelled\",\"col\":4}},{\"id\":\"ydPkhrv9BQ\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"I1rZuubk5h\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>DS Item Stock Summary</b></span>\",\"col\":12}},{\"id\":\"851UQCjm9t\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"In Stock Items\",\"col\":4}},{\"id\":\"zRH4GA8sJk\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Low Stock Items\",\"col\":4}},{\"id\":\"wOw2uBoNU2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Items Stock Dashboard\",\"col\":3}}]",
  "creation": "2023-06-08 19:50:30.439258",
  "custom_blocks": [],
  "docstatus": 0,
@@ -12,7 +12,7 @@
  "is_hidden": 0,
  "label": "Admin Workspace",
  "links": [],
- "modified": "2023-06-10 11:57:05.585361",
+ "modified": "2023-06-10 20:35:27.867715",
  "modified_by": "Administrator",
  "module": "Advika Enterprises",
  "name": "Admin Workspace",
@@ -20,6 +20,14 @@
   {
    "label": "Order Received",
    "number_card_name": "Order Received"
+  },
+  {
+   "label": "Low Stock Items",
+   "number_card_name": "DS Item Low Stock"
+  },
+  {
+   "label": "In Stock Items",
+   "number_card_name": "DS In Stock Items"
   },
   {
    "label": "Total Sales Order Received",
@@ -70,58 +78,11 @@
  "sequence_id": 1.0,
  "shortcuts": [
   {
-   "color": "Yellow",
+   "color": "Grey",
    "doc_view": "List",
-   "format": "{}",
-   "label": "Create Purchase order",
-   "link_to": "Sales Order",
-   "stats_filter": "{\"status\":[\"=\",\"To Deliver\"]}",
-   "type": "DocType"
-  },
-  {
-   "color": "Red",
-   "doc_view": "List",
-   "format": "{}",
-   "label": "DS Pending Order",
-   "link_to": "DS Order Delivery Status",
-   "stats_filter": "{\"ds_order_status\":[\"=\",\"Pending\"]}",
-   "type": "DocType"
-  },
-  {
-   "color": "Yellow",
-   "doc_view": "List",
-   "format": "{}",
-   "label": "Order Processed",
-   "link_to": "DS Order Delivery Status",
-   "stats_filter": "{\"ds_order_status\":[\"=\",\"Order Processed\"]}",
-   "type": "DocType"
-  },
-  {
-   "color": "Yellow",
-   "doc_view": "List",
-   "format": "{}",
-   "label": "Ready Order for pickup",
-   "link_to": "DS Order Delivery Status",
-   "stats_filter": "{\"ds_order_status\":[\"=\",\"Order Ready for Pickup\"]}",
-   "type": "DocType"
-  },
-  {
-   "color": "Cyan",
-   "doc_view": "List",
-   "format": "{}",
-   "label": "DS Order In Transit ",
-   "link_to": "DS Order Delivery Status",
-   "stats_filter": "{\"ds_order_status\":[\"=\",\"Item has been picked up by Delivery Boy\"]}",
-   "type": "DocType"
-  },
-  {
-   "color": "Green",
-   "doc_view": "List",
-   "format": "{}",
-   "label": "Order Delivered",
-   "link_to": "DS Order Delivery Status",
-   "stats_filter": "{\"ds_order_status\":[\"=\",\"Item has been delivered\"]}",
-   "type": "DocType"
+   "label": "Items Stock Dashboard",
+   "link_to": "dropship",
+   "type": "Page"
   }
  ],
  "title": "Admin Workspace"

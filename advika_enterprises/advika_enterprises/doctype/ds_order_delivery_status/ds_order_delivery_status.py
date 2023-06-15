@@ -565,3 +565,6 @@ def update_status_on_payment_entry_submit(doc, method):
         frappe.msgprint(_("DS Order Status Updated to {0}").format(status_log.new_status))
     else:
         frappe.throw(_("Sales Invoice/Sales Order not found in Payment Entry references."))
+
+# get supplier name in sales order
+

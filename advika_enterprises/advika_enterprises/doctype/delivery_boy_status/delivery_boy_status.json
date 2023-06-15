@@ -1,17 +1,18 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:OD{#########}",
  "creation": "2023-06-07 00:15:49.104669",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "delivery_boy",
+  "column_break_toyn",
   "purchase_order",
   "purchase_invoice",
-  "sales_order",
-  "sales_invoice",
-  "delivery_boy",
+  "section_break_wdjo",
   "ds_db_status_update",
   "amended_from"
  ],
@@ -31,6 +32,7 @@
   {
    "fieldname": "delivery_boy",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Delivery Boy",
    "options": "Delivery Boy"
   },
@@ -41,6 +43,14 @@
    "options": "DS DB Status Update"
   },
   {
+   "fieldname": "column_break_toyn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_wdjo",
+   "fieldtype": "Section Break"
+  },
+  {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
@@ -48,27 +58,16 @@
    "options": "Delivery Boy Status",
    "print_hide": 1,
    "read_only": 1
-  },
-  {
-   "fieldname": "sales_order",
-   "fieldtype": "Link",
-   "label": "Sales Order",
-   "options": "Sales Order"
-  },
-  {
-   "fieldname": "sales_invoice",
-   "fieldtype": "Link",
-   "label": "Sales Invoice",
-   "options": "Sales Invoice"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-06-08 01:39:39.577920",
+ "modified": "2023-06-10 19:55:45.601794",
  "modified_by": "Administrator",
  "module": "Advika Enterprises",
  "name": "Delivery Boy Status",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

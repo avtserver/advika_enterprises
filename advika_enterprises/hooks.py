@@ -109,8 +109,12 @@ app_license = "MIT"
 #		"on_trash": "method"
 #	}
 # }
-# hooks.py
+# hooks.py  advika_enterprises.advika_enterprises.doctype.custom_script.get_item_supplier
 doc_events = {
+    # "Sales Order Item": {
+    #     "on_update": "advika_enterprises.advika_enterprises.doctype.ds_order_delivery_status.ds_order_delivery_status.get_item_supplier"
+    # },
+
     "Sales Order": {
         "on_submit": [
             "advika_enterprises.advika_enterprises.doctype.ds_stock_transaction.ds_stock_transaction.create_from_sales_order",
