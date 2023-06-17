@@ -145,9 +145,10 @@ doc_events = {
         ]
     },
     "Delivery Boy Status": {
-        "on_update": "advika_enterprises.advika_enterprises.doctype.ds_order_delivery_status.ds_order_delivery_status.update_ds_order_delivery_status_on_db_save"
-
+        "on_update": "advika_enterprises.advika_enterprises.doctype.ds_order_delivery_status.ds_order_delivery_status.update_ds_order_delivery_status_on_db_save",
+        "on_submit": "advika_enterprises.advika_enterprises.doctype.delivery_boy_status.delivery_boy_status.update_po_status_on_submit"
     },
+
    "Item": {
         "after_insert": "advika_enterprises.advika_enterprises.doctype.ds_stock.ds_stock.create_ds_stock_from_item",
     }
