@@ -14,7 +14,8 @@
   "column_break_jpiv",
   "comment",
   "column_break_xrup",
-  "status"
+  "status",
+  "amended_from"
  ],
  "fields": [
   {
@@ -55,12 +56,21 @@
   {
    "fieldname": "column_break_jpiv",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Supplier Order Confirmation",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-06-10 19:28:18.647256",
+ "modified": "2023-06-24 15:44:17.423200",
  "modified_by": "Administrator",
  "module": "Advika Enterprises",
  "name": "Supplier Order Confirmation",
@@ -94,5 +104,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1
 }

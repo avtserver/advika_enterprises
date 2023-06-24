@@ -45,3 +45,27 @@ frappe.ui.form.on('Supplier Order Confirmation', {
 //         });
 //     },
 // });
+frappe.ui.form.on("Supplier Order Confirmation", {
+    on_submit: function(frm) {
+        if (frm.doc.status === "Approved") {
+            frappe.confirm(
+                'Do you want to print the Approved Order Receipt?',
+                function(){
+                    // if the user clicks on "Yes"
+                    let print_format = "Supplier Approved Order Receipt"; // change this to your print format
+                    window.open(`/printview?doctype=Supplier Order Confirmation&name=${frm.doc.name}&format=${print_format}`, "_blank");
+                },
+                function(){
+                    // if the user clicks on "No" or cancels the prompt
+                    // do nothing
+                }
+            )
+        }
+        else if (frm.doc.status === "Cancelled") {
+            frappe.msgprint('This order has been cancelled.', 'Order Cancelled');
+        }
+        else if (frm.doc.status === "Hold") {
+            frappe.msgprint('This order is on hold.', 'Order On Hold');
+        }
+    }
+});

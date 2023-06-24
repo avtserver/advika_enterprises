@@ -204,7 +204,7 @@ def update_ds_order_status_on_soc_submit(doc, method):
     # Update DS Order Delivery Status based on Supplier Order Confirmation status
     if doc.status == 'Approved':
         delivery_status.ds_order_status = 'Order Processed'
-    elif doc.status == 'Canceled':
+    elif doc.status == 'Cancelled':
         delivery_status.ds_order_status = 'Order cancelled by Supplier'
     elif doc.status == 'Hold':
         delivery_status.ds_order_status = 'Order in hold'
@@ -226,7 +226,10 @@ def update_ds_order_status_on_soc_submit(doc, method):
 
     # Print a message
     frappe.msgprint(_("DS Order Status Updated to {0}").format(status_log.new_status))
-
+# validation for hold
+def validate(self):
+    if self.status == "Hold" and self.docstatus == 1:
+        frappe.throw(_("Cannot submit Supplier Order Confirmation with status 'Hold'"))
 
 # Purchase Invoice Hoo
 @frappe.whitelist()
