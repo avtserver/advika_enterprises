@@ -167,9 +167,30 @@ fixtures = [
     {"doctype": "Print Format", "filters": [["name", "=", "Drop Shipping Sales Invoice"]]},
 ]
 
+# fixtures = [
+#     {"dt":"Custom Field", "filters": [
+#         ["dt", "=", "Item"],
+#         ["fieldname", "=", "ds_maintain_stock"]
+#     ]}
+# ]
 
+# If you have multiple custom fields for a doctype, and you want to export all of them, you can modify the filter to include just the doctype name:
 
+# fixtures = [
+#     {"dt":"Custom Field", "filters": [
+#         ["dt", "=", "Item"]
+#     ]}
+# ]
+# Multiple Doctypes
 
+# fixtures = ["Doctype Name 1", "Doctype Name 2"]
+# In this case, all records from "Doctype Name 1" and "Doctype Name 2" will be exported.
+
+# Specific Filters
+
+# fixtures = [
+#     {"dt":"Doctype Name", "filters": [["fieldname", "operator", "value"]]}
+# ]
 
 # Scheduled Tasks
 # ---------------
