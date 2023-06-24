@@ -13,6 +13,8 @@ app_license = "MIT"
 # include js, css files in header of desk.html
 # app_include_css = "/assets/advika_enterprises/css/advika_enterprises.css"
 # app_include_js = "/assets/advika_enterprises/js/advika_enterprises.js"
+app_include_js = "/assets/advika_enterprises/js/custom_sales_order_script.js"
+
 
 # include js, css files in header of web template
 # web_include_css = "/assets/advika_enterprises/css/advika_enterprises.css"
@@ -157,6 +159,13 @@ doc_events = {
     },
 }
 
+
+
+# add fixtures
+
+fixtures = [
+    "test doc",
+]
 
 
 
