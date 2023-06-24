@@ -164,8 +164,9 @@ doc_events = {
 # add fixtures
 
 fixtures = [
-    "test doc",
+    {"doctype": "Print Format", "filters": [["name", "=", "Drop Shipping Sales Invoice"]]},
 ]
+
 
 
 
