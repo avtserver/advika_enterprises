@@ -27,12 +27,15 @@
  ],
  "fields": [
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "item_code",
    "fieldtype": "Link",
    "label": "Item code",
-   "options": "DS Stock"
+   "options": "DS Stock",
+   "reqd": 1
   },
   {
+   "allow_in_quick_entry": 1,
    "depends_on": "eval:doc.type_of_entry == \"Add Stock\"\n",
    "fieldname": "add_stock",
    "fieldtype": "Float",
@@ -47,8 +50,10 @@
   {
    "fieldname": "type_of_entry",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Type of entry",
-   "options": "\nAdd Stock\nSold Stock"
+   "options": "\nAdd Stock\nSold Stock",
+   "reqd": 1
   },
   {
    "depends_on": "item_code",
@@ -62,6 +67,7 @@
    "label": "Remarks"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "current_stock",
    "fieldtype": "Data",
    "label": "Current Stock",
@@ -100,6 +106,7 @@
    "label": "Sales order(Ref)"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "transaction_type",
    "fieldtype": "Select",
    "label": "Transaction Type",
@@ -115,7 +122,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-11 14:19:32.668428",
+ "modified": "2023-06-22 23:16:43.847290",
  "modified_by": "Administrator",
  "module": "Advika Enterprises",
  "name": "DS Stock Transaction",

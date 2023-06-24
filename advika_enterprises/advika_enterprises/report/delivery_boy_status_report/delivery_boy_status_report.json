@@ -23,7 +23,8 @@
  ],
  "idx": 0,
  "is_standard": "Yes",
- "modified": "2023-06-11 11:48:47.257080",
+ "json": "{}",
+ "modified": "2023-06-19 17:20:27.838099",
  "modified_by": "Administrator",
  "module": "Advika Enterprises",
  "name": "Delivery Boy Status Report",
@@ -32,7 +33,7 @@
  "query": "",
  "ref_doctype": "Delivery Boy Status",
  "report_name": "Delivery Boy Status Report",
- "report_type": "Script Report",
+ "report_type": "Report Builder",
  "roles": [
   {
    "role": "DS Supplier"

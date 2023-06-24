@@ -91,3 +91,4 @@ frappe.ui.form.on('DS Stock Transaction', {
         frm.toggle_display('Sales_order_ref', true);
     }
 });
+

@@ -1,0 +1,22 @@
+{
+ "creation": "2023-06-22 22:54:25.717890",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "filters_json": "{\"company\":\"myAdvika\",\"period_start_date\":\"2023-05-22\",\"period_end_date\":\"2023-06-22\",\"account\":[],\"party_type\":\"Supplier\",\"party\":[\"Advika Enterprises\"],\"group_party\":1}",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "label": "Outstanding Amount",
+ "modified": "2023-06-22 22:54:25.802272",
+ "modified_by": "Administrator",
+ "module": "Advika Enterprises",
+ "name": "Outstanding Amount",
+ "owner": "Administrator",
+ "report_field": "amount",
+ "report_function": "Sum",
+ "report_name": "Payment Ledger",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Daily",
+ "type": "Report"
+}

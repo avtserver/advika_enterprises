@@ -88,3 +88,19 @@ def create_ds_stock_from_item(doc, method):
         ds_stock_transaction.insert(ignore_permissions=True)
         frappe.msgprint(f"DS Stock for item {doc.item_code} was created successfully with {doc.ds_initial_stock} Initial Stock!")
 
+# unpublished website item script
+
+# from frappe.website.doctype.website_item.website_item import WebsiteItem
+
+def check_uncheck_published(doc, method):
+    website_item = frappe.get_list("Website Item", filters={"item_code": doc.item_code}, fields=["name", "published"])
+
+    for item in website_item:
+        if doc.available_stock > 0:
+            # If the stock is greater than 0 and the item is unpublished, publish it
+            if not item.published:
+                frappe.db.set_value("Website Item", item.name, "published", 1)
+        else:
+            # If the stock is 0 and the item is published, unpublish it
+            if item.published:
+                frappe.db.set_value("Website Item", item.name, "published", 0)

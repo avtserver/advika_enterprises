@@ -1,6 +1,11 @@
 {
- "charts": [],
- "content": "[{\"id\":\"XQugGO1LcL\",\"type\":\"header\",\"data\":{\"text\":\"<b>Supplier Order actions and summary</b><br>\",\"col\":12}},{\"id\":\"S9cKpAL2Pv\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Order Received\",\"col\":6}},{\"id\":\"MnHVJGZKF4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pending Order\",\"col\":6}},{\"id\":\"GTpOd_uzCg\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"keLP7vrfvr\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Order Approved\",\"col\":4}},{\"id\":\"HQZyJD4i9S\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Order Hold\",\"col\":4}},{\"id\":\"KrUxLkWNly\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Order Cancelled\",\"col\":4}},{\"id\":\"WQZTmeGaHD\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"4tVclz8VSY\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Items Stock Summary</b></span>\",\"col\":12}},{\"id\":\"-vskMSu2kx\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"In Stock Items\",\"col\":4}},{\"id\":\"rz7DPUK15y\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Low stock Items\",\"col\":4}},{\"id\":\"ECtXdFv0RM\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Items Dashboard\",\"col\":3}},{\"id\":\"o98y9eAR0g\",\"type\":\"card\",\"data\":{\"card_name\":\"Items & Stock Entry\",\"col\":4}}]",
+ "charts": [
+  {
+   "chart_name": "DS Items Stock",
+   "label": "DS Item Available Stock"
+  }
+ ],
+ "content": "[{\"id\":\"XQugGO1LcL\",\"type\":\"header\",\"data\":{\"text\":\"<b>Supplier Order actions and summary</b><br>\",\"col\":12}},{\"id\":\"S9cKpAL2Pv\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Order Received\",\"col\":6}},{\"id\":\"MnHVJGZKF4\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pending Order\",\"col\":6}},{\"id\":\"GTpOd_uzCg\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"keLP7vrfvr\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Order Approved\",\"col\":4}},{\"id\":\"HQZyJD4i9S\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Order Hold\",\"col\":4}},{\"id\":\"KrUxLkWNly\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Order Cancelled\",\"col\":4}},{\"id\":\"WQZTmeGaHD\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"4tVclz8VSY\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Items Stock Summary</b></span>\",\"col\":12}},{\"id\":\"-vskMSu2kx\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"In Stock Items\",\"col\":4}},{\"id\":\"rz7DPUK15y\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Low stock Items\",\"col\":4}},{\"id\":\"8FwDZJ4R3f\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Supplier Dashboard\",\"col\":3}},{\"id\":\"wW02XcT13_\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"lvusV6_M69\",\"type\":\"chart\",\"data\":{\"chart_name\":\"DS Item Available Stock\",\"col\":12}},{\"id\":\"o98y9eAR0g\",\"type\":\"card\",\"data\":{\"card_name\":\"Items & Stock Entry\",\"col\":4}},{\"id\":\"swOqwWBXns\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}}]",
  "creation": "2023-06-08 19:41:27.961045",
  "custom_blocks": [],
  "docstatus": 0,
@@ -49,9 +54,37 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 2,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "DS Item Report",
+   "link_count": 0,
+   "link_to": "DS Stock Item",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Supplier Ledger Summary Report",
+   "link_count": 0,
+   "link_to": "Supplier Ledger Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2023-06-10 20:46:01.469076",
+ "modified": "2023-06-23 15:38:20.303314",
  "modified_by": "Administrator",
  "module": "Advika Enterprises",
  "name": "DS Supplier Admin",
@@ -102,9 +135,9 @@
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Items Dashboard",
-   "link_to": "dropship",
-   "type": "Page"
+   "label": "Supplier Dashboard",
+   "link_to": "DS Supplier Dashboard",
+   "type": "Dashboard"
   }
  ],
  "title": "DS Supplier Admin"

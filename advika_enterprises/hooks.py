@@ -151,7 +151,10 @@ doc_events = {
 
    "Item": {
         "after_insert": "advika_enterprises.advika_enterprises.doctype.ds_stock.ds_stock.create_ds_stock_from_item",
-    }
+    },
+    "DS Stock": {
+        "on_update": "advika_enterprises.advika_enterprises.doctype.ds_stock.ds_stock.check_uncheck_published",
+    },
 }
 
 

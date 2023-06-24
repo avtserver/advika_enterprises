@@ -513,6 +513,10 @@ def update_ds_order_delivery_status_on_db_save(doc, method):
 
 @frappe.whitelist()
 def update_status_on_payment_entry_submit(doc, method):
+    # Check the value of payment_type, return if it's not 'Receive'
+    if doc.payment_type != 'Receive':
+        return
+
     # Try to retrieve the Sales Invoice or Sales Order from the Payment Entry references
     sales_invoice = None
     sales_order = None
@@ -523,6 +527,21 @@ def update_status_on_payment_entry_submit(doc, method):
         elif reference.reference_doctype == 'Sales Order':
             sales_order = reference.reference_name
             break
+
+    # Rest of the code...
+
+# @frappe.whitelist()
+# def update_status_on_payment_entry_submit(doc, method):
+#     # Try to retrieve the Sales Invoice or Sales Order from the Payment Entry references
+#     sales_invoice = None
+#     sales_order = None
+#     for reference in doc.references:
+#         if reference.reference_doctype == 'Sales Invoice':
+#             sales_invoice = reference.reference_name
+#             break
+#         elif reference.reference_doctype == 'Sales Order':
+#             sales_order = reference.reference_name
+#             break
 
     # Check if a Sales Invoice or Sales Order was found
     if sales_invoice:

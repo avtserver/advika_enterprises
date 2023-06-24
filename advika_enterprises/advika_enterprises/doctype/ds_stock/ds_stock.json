@@ -10,6 +10,7 @@
  "field_order": [
   "item_code",
   "item_name",
+  "column_break_bplu",
   "available_stock"
  ],
  "fields": [
@@ -36,11 +37,15 @@
    "in_list_view": 1,
    "label": "Available Stock",
    "reqd": 1
+  },
+  {
+   "fieldname": "column_break_bplu",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-06 22:16:42.159748",
+ "modified": "2023-06-22 23:20:40.214975",
  "modified_by": "Administrator",
  "module": "Advika Enterprises",
  "name": "DS Stock",
