@@ -227,9 +227,9 @@ def update_ds_order_status_on_soc_submit(doc, method):
     # Print a message
     frappe.msgprint(_("DS Order Status Updated to {0}").format(status_log.new_status))
 # validation for hold
-def validate(self):
-    if self.status == "Hold" and self.docstatus == 1:
-        frappe.throw(_("Cannot submit Supplier Order Confirmation with status 'Hold'"))
+# def validate(self):
+#     if self.status == "Hold" and self.docstatus == 1:
+#         frappe.throw(_("Cannot submit Supplier Order Confirmation with status 'Hold'"))
 
 # Purchase Invoice Hoo
 @frappe.whitelist()
@@ -282,19 +282,98 @@ def update_status_and_log_on_pi_submit(doc, method):
 
 # and also create delivery boy status entry for further order status update
 
+# @frappe.whitelist()
+# def create_delivery_boy_status_on_pi_submit(doc, method):
+#     # Retrieve the name of the purchase order from the first item in the purchase invoice
+#     purchase_order = doc.items[0].purchase_order if doc.items else None
+
+#     # Check if a purchase order was found
+#     if purchase_order:
+#         # Create a new Delivery Boy Status document
+#         delivery_boy_status = frappe.new_doc('Delivery Boy Status')
+
+#         # Set the purchase order and purchase invoice fields
+#         delivery_boy_status.purchase_order = purchase_order
+#         delivery_boy_status.purchase_invoice = doc.name
+
+#         # Save the document as a draft
+#         delivery_boy_status.save()
+
+#         # Print a message
+#         frappe.msgprint(_("Delivery Boy Status document created for <b>further order updates</b>."))
+#     else:
+#         frappe.throw(_("Purchase Order not found in Purchase Invoice items."))
+import re
+import html
+
 @frappe.whitelist()
 def create_delivery_boy_status_on_pi_submit(doc, method):
     # Retrieve the name of the purchase order from the first item in the purchase invoice
-    purchase_order = doc.items[0].purchase_order if doc.items else None
+    purchase_order_name = doc.items[0].purchase_order if doc.items else None
 
     # Check if a purchase order was found
-    if purchase_order:
+    if purchase_order_name:
+        # Retrieve the purchase order document
+        purchase_order = frappe.get_doc('Purchase Order', purchase_order_name)
+
+        # Retrieve the sales order from the first item in the purchase order
+        sales_order = purchase_order.items[0].sales_order if purchase_order.items else None
+
+        # Check if a sales order was found
+        if not sales_order:
+            frappe.throw(_("Sales Order not found in Purchase Order items."))
+
+        # Retrieve the name of the sales invoice from the sales order
+        sales_invoice_name = frappe.get_value('Sales Invoice Item', {'sales_order': sales_order}, 'parent')
+
+        # Check if a sales invoice was found
+        if not sales_invoice_name:
+            frappe.throw(_("Sales Invoice not found for the Sales Order."))
+
+        # Retrieve the sales invoice document
+        sales_invoice = frappe.get_doc('Sales Invoice', sales_invoice_name)
+
+        # Check the status of the sales invoice
+        order_payment_status = "Paid" if sales_invoice.status == "Paid" else "COD"
+
+        # Fetch the shipping address
+        shipping_address = frappe.get_doc('Address', doc.shipping_address)
+        delivery_pin_code = shipping_address.pincode
+
+        # Fetch the delivery boy based on pin code
+        delivery_boys = frappe.db.sql("""
+            SELECT `parent`
+            FROM `tabDelivery Boy Area`
+            WHERE `pin_code`=%s
+        """, (delivery_pin_code,), as_dict=True)
+
+        # Check if a delivery boy was found
+        if not delivery_boys:
+            frappe.throw(_("No delivery boy found for the pin code."))
+
+        # Retrieve the name of the first delivery boy
+        delivery_boy = delivery_boys[0].parent
+
         # Create a new Delivery Boy Status document
         delivery_boy_status = frappe.new_doc('Delivery Boy Status')
 
-        # Set the purchase order and purchase invoice fields
-        delivery_boy_status.purchase_order = purchase_order
+        # Set the purchase order, purchase invoice, sales order, sales invoice, and delivery pin code fields
+        delivery_boy_status.purchase_order = purchase_order_name
         delivery_boy_status.purchase_invoice = doc.name
+        delivery_boy_status.sales_order = sales_order
+        delivery_boy_status.sales_invoice = sales_invoice_name
+        delivery_boy_status.order_payment_status = order_payment_status
+        delivery_boy_status.delivery_pin_code = delivery_pin_code
+        delivery_boy_status.current_status = 'Order Ready for Pickup'
+
+        # Remove HTML tags from the address fields
+        clean_shipping_address = re.sub(r'<.*?>', '', doc.shipping_address_display)
+        clean_supplier_address = re.sub(r'<.*?>', '', doc.address_display)
+
+        delivery_boy_status.delivery_address = clean_shipping_address
+        delivery_boy_status.supplier_address = clean_supplier_address
+
+        delivery_boy_status.delivery_boy = delivery_boy
 
         # Save the document as a draft
         delivery_boy_status.save()
@@ -303,7 +382,6 @@ def create_delivery_boy_status_on_pi_submit(doc, method):
         frappe.msgprint(_("Delivery Boy Status document created for <b>further order updates</b>."))
     else:
         frappe.throw(_("Purchase Order not found in Purchase Invoice items."))
-
 
 # further order status update by Delivery Boy Status document normaly
 
@@ -384,14 +462,17 @@ def update_ds_order_delivery_status_on_db_save(doc, method):
             if latest_status_update.status == 'Item Received':
                 # Update DS Order Delivery Status
                 delivery_status.ds_order_status = 'Item has been picked up by Delivery Boy'
+                
 
             elif latest_status_update.status == 'Out for delivery':
                 # Update DS Order Delivery Status
                 delivery_status.ds_order_status = 'Item is out for delivery'
+                
 
             elif latest_status_update.status == 'Delivered':
                 # Update DS Order Delivery Status
                 delivery_status.ds_order_status = 'Item has been delivered'
+               
 
             delivery_status.status_updated_on = nowdate()
             delivery_status.comment = 'Status updated to {} on update of Delivery Boy Status {}.'.format(delivery_status.ds_order_status, doc.name)

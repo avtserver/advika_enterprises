@@ -144,6 +144,7 @@ doc_events = {
         "on_submit": [
             "advika_enterprises.advika_enterprises.doctype.ds_order_delivery_status.ds_order_delivery_status.update_status_and_log_on_pi_submit",
             "advika_enterprises.advika_enterprises.doctype.ds_order_delivery_status.ds_order_delivery_status.create_delivery_boy_status_on_pi_submit"
+            # "advika_enterprises.advika_enterprises.doctype.ds_order_delivery_status.ds_order_delivery_status.get_sales_order_from_purchase_invoice"
         ]
     },
     "Delivery Boy Status": {

@@ -14,7 +14,8 @@
   "vehicle_type",
   "vehicle_number",
   "driving_licence",
-  "contact_number"
+  "contact_number",
+  "delivery_areas"
  ],
  "fields": [
   {
@@ -53,11 +54,17 @@
    "fieldname": "contact_number",
    "fieldtype": "Data",
    "label": "Contact Number"
+  },
+  {
+   "fieldname": "delivery_areas",
+   "fieldtype": "Table",
+   "label": "Delivery Areas",
+   "options": "Delivery Boy Area"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-06-07 10:24:54.466029",
+ "modified": "2023-06-26 15:29:03.288263",
  "modified_by": "Administrator",
  "module": "Advika Enterprises",
  "name": "Delivery Boy",
