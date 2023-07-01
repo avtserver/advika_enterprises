@@ -70,7 +70,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-06-24 15:44:17.423200",
+ "modified": "2023-07-01 12:30:01.986199",
  "modified_by": "Administrator",
  "module": "Advika Enterprises",
  "name": "Supplier Order Confirmation",
@@ -99,6 +99,7 @@
    "report": 1,
    "role": "DS Supplier",
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],

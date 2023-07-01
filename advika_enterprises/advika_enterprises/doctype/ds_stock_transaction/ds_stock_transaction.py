@@ -86,7 +86,8 @@ def create_stock_entry(item, doc):
        "remarks": f"Create from Sales order - {doc.name} ",  # Add a note about the initial stock
         })
     
-    stock_entry.submit()
+    # stock_entry.submit()
+    stock_entry.save()
     frappe.msgprint(f"DS Stock Transaction also updated successfully for {item.item_code}")
 
 

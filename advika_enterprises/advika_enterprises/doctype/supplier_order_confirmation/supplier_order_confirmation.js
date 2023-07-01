@@ -69,3 +69,15 @@ frappe.ui.form.on("Supplier Order Confirmation", {
         }
     }
 });
+frappe.ui.form.on('Supplier Order Confirmation', {
+        refresh: function(frm) {
+            frm.add_custom_button(__('Print'), 
+            function(){
+                // if the user clicks on "Yes"
+                let print_format = "Supplier Approved Order Receipt"; // change this to your print format
+                window.open(`/printview?doctype=Supplier Order Confirmation&name=${frm.doc.name}&format=${print_format}`, "_blank");
+            },
+            );
+        }
+    });
+    

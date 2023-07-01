@@ -253,3 +253,15 @@ frappe.ui.form.on('Delivery Boy Status', {
         }
     },
 });
+
+frappe.ui.form.on('Delivery Boy Status', {
+    refresh: function(frm) {
+        frm.add_custom_button(__('Delivery Receipt'), 
+        function(){
+            // if the user clicks on "Yes"
+            let print_format = "Delivery Receipt"; // change this to your print format
+            window.open(`/printview?doctype=Delivery Boy Status&name=${frm.doc.name}&format=${print_format}`, "_blank");
+        },
+        );
+    }
+});

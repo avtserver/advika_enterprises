@@ -109,7 +109,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-06-26 16:10:01.556309",
+ "modified": "2023-07-01 12:35:11.998685",
  "modified_by": "Administrator",
  "module": "Advika Enterprises",
  "name": "Delivery Boy Status",
@@ -150,6 +150,7 @@
    "report": 1,
    "role": "Delivery Boy",
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],
