@@ -164,9 +164,16 @@ doc_events = {
 
 # add fixtures
 
+# fixtures = [
+#     {"doctype": "Print Format", "filters": [["name", "=", "Drop Shipping Sales Invoice"]]},
+# ]
 fixtures = [
     {"doctype": "Print Format", "filters": [["name", "=", "Drop Shipping Sales Invoice"]]},
+    {"doctype": "Role", "filters": [["name", "=", "Customer"]]},
+    {"doctype": "Role Permission for Page and Report", "filters": [["role", "=", "Customer"]]},
+    {"doctype": "Custom DocPerm", "filters": [["parent", "=", "Website Item"], ["role", "=", "Customer"]]},
 ]
+
 
 # fixtures = [
 #     {"dt":"Custom Field", "filters": [
