@@ -13,7 +13,9 @@ app_license = "MIT"
 # include js, css files in header of desk.html
 # app_include_css = "/assets/advika_enterprises/css/advika_enterprises.css"
 # app_include_js = "/assets/advika_enterprises/js/advika_enterprises.js"
-app_include_js = "/assets/advika_enterprises/js/custom_sales_order_script.js"
+# app_include_js = "/assets/advika_enterprises/js/custom_sales_order_script.js"
+app_include_js = ["/assets/advika_enterprises/js/custom_sales_order_script.js", "/assets/advika_enterprises/js/signup.js"]
+
 
 
 # include js, css files in header of web template
@@ -226,6 +228,10 @@ fixtures = [
 # override_whitelisted_methods = {
 #	"frappe.desk.doctype.event.event.get_events": "advika_enterprises.event.get_events"
 # }
+override_whitelisted_methods = {
+    'frappe.core.doctype.user.user.sign_up': 'advika_enterprises.custom_user.sign_up'
+}
+
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
