@@ -14,6 +14,8 @@ app_license = "MIT"
 # app_include_css = "/assets/advika_enterprises/css/advika_enterprises.css"
 # app_include_js = "/assets/advika_enterprises/js/advika_enterprises.js"
 app_include_js = "/assets/advika_enterprises/js/custom_sales_order_script.js"
+# add one more js
+# app_include_js = "/assets/advika_enterprises/js/website_script.js"
 # app_include_js = ["/assets/advika_enterprises/js/custom_sales_order_script.js", "/assets/advika_enterprises/js/signup.js"]
 
 
@@ -21,6 +23,9 @@ app_include_js = "/assets/advika_enterprises/js/custom_sales_order_script.js"
 # include js, css files in header of web template
 # web_include_css = "/assets/advika_enterprises/css/advika_enterprises.css"
 # web_include_js = "/assets/advika_enterprises/js/advika_enterprises.js"
+
+
+
 
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "advika_enterprises/public/scss/website"
@@ -42,11 +47,11 @@ app_include_js = "/assets/advika_enterprises/js/custom_sales_order_script.js"
 # ----------
 
 # application home page (will override Website Settings)
-# home_page = "login"
+# home_page = "/home"
 
 # website user home page (by Role)
 # role_home_page = {
-#	"Role": "home_page"
+# 	"Role": "home_page"
 # }
 
 # Generators
@@ -54,6 +59,7 @@ app_include_js = "/assets/advika_enterprises/js/custom_sales_order_script.js"
 
 # automatically create page for each record of this doctype
 # website_generators = ["Web Page"]
+
 
 # Jinja
 # ----------
@@ -168,6 +174,7 @@ doc_events = {
 fixtures = [
     {"doctype": "Print Format", "filters": [["name", "=", "Drop Shipping Sales Invoice"]]},
 ]
+fixtures = ["Customer Group", "Price List"]
 
 
 

@@ -1,0 +1,73 @@
+
+{% extends "templates/web.html" %}
+
+{% block content %}
+
+<div class="container">
+    <div class="card primary">
+      <h2>Become a Retailer</h2>
+      <p>Sign up to become a retailer and enjoy the benefits of our platform.</p>
+      <a href="/become-a-retailer" class="btn">Become a Retailer</a>
+    </div>
+    
+    <div class="card primary">
+      <h2>Become a Wholesaler</h2>
+      <p>Sign up to become a wholesaler and enjoy the benefits of our platform.</p>
+      <a href="/become-a-wholesaler" class="btn">Become a Wholesaler</a>
+    </div>
+  </div>
+  
+  <div class="cta-container primary">
+    <h2>Explore Our Products & Services</h2>
+    <p>Discover the variety of products and services we offer.</p>
+    <a href="/all-products" class="btn">Explore All Products</a>
+  </div>
+
+  <style>
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; /* Added flex-wrap property to wrap cards to the next line if needed */
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: 40%;
+        padding: 20px;
+        margin: 20px;
+        text-align: center;
+    }
+
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+
+    .btn {
+        background-color: blue;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .primary {
+        color: #007bff; /* Replace with your primary color */
+    }
+
+    .primary .btn {
+        background-color: #007bff; /* Replace with your primary color */
+        color: #fff;
+    }
+
+    .cta-container {
+        text-align: center; /* Center align the CTA content */
+        margin-top: 40px; /* Add some spacing from the cards */
+    }
+</style>
+
+
+
+
+{% endblock %}
