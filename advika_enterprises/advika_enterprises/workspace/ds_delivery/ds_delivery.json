@@ -5,9 +5,14 @@
    "label": "Order Tracking"
   }
  ],
- "content": "[{\"id\":\"dT6lf8eLDo\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">DS Delivery</span>\",\"col\":12}},{\"id\":\"MTP0I0sm0L\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Order Ready for pickup\",\"col\":3}},{\"id\":\"GzM1LX9YKD\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Items Received for Delivery\",\"col\":3}},{\"id\":\"pAXbdWefce\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Out for Delivery\",\"col\":3}},{\"id\":\"aiSkTQzlha\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Order Delivered\",\"col\":3}},{\"id\":\"_S_wMwlIRc\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Order Tracking\",\"col\":12}}]",
+ "content": "[{\"id\":\"dT6lf8eLDo\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">DS Delivery</span>\",\"col\":12}},{\"id\":\"MTP0I0sm0L\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Order Ready for pickup\",\"col\":3}},{\"id\":\"GzM1LX9YKD\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Items Received for Delivery\",\"col\":3}},{\"id\":\"pAXbdWefce\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Out for Delivery\",\"col\":3}},{\"id\":\"aiSkTQzlha\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Order Delivered\",\"col\":3}},{\"id\":\"_S_wMwlIRc\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Order Tracking\",\"col\":12}},{\"id\":\"s7-4be2C9C\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"card layout\",\"col\":12}},{\"id\":\"TcFKTT97iC\",\"type\":\"custom_block\",\"data\":{\"custom_block_name\":\"Dropship Page\",\"col\":12}}]",
  "creation": "2023-06-10 14:07:18.042114",
- "custom_blocks": [],
+ "custom_blocks": [
+  {
+   "custom_block_name": "Dropship Page",
+   "label": "Dropship Page"
+  }
+ ],
  "docstatus": 0,
  "doctype": "Workspace",
  "for_user": "",
@@ -17,7 +22,7 @@
  "is_hidden": 0,
  "label": "DS Delivery",
  "links": [],
- "modified": "2023-06-27 00:38:53.917454",
+ "modified": "2023-07-04 17:22:56.846752",
  "modified_by": "Administrator",
  "module": "Advika Enterprises",
  "name": "DS Delivery",

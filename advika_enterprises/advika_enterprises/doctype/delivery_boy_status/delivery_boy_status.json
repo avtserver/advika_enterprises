@@ -9,16 +9,22 @@
  "engine": "InnoDB",
  "field_order": [
   "delivery_boy",
-  "column_break_toyn",
+  "column_break_qbne",
+  "current_status",
+  "column_break_ecph",
+  "order_payment_status",
+  "section_break_totj",
   "purchase_order",
   "purchase_invoice",
+  "column_break_xeal",
   "sales_order",
+  "sales_order_display",
   "sales_invoice",
-  "current_status",
-  "order_payment_status",
-  "section_break_wdjo",
+  "section_break_ieul",
   "supplier_address",
+  "column_break_yvrz",
   "delivery_address",
+  "section_break_wdjo",
   "delivery_pin_code",
   "ds_db_status_update",
   "amended_from"
@@ -29,20 +35,23 @@
    "fieldtype": "Link",
    "label": "Purchase Order",
    "options": "Purchase Order",
+   "read_only": 1,
    "unique": 1
   },
   {
    "fieldname": "purchase_invoice",
    "fieldtype": "Link",
    "label": "Purchase Invoice",
-   "options": "Purchase Invoice"
+   "options": "Purchase Invoice",
+   "read_only": 1
   },
   {
    "fieldname": "delivery_boy",
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Delivery Boy",
-   "options": "Delivery Boy"
+   "options": "Delivery Boy",
+   "read_only": 1
   },
   {
    "fieldname": "ds_db_status_update",
@@ -51,21 +60,8 @@
    "options": "DS DB Status Update"
   },
   {
-   "fieldname": "column_break_toyn",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "section_break_wdjo",
    "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Delivery Boy Status",
-   "print_hide": 1,
-   "read_only": 1
   },
   {
    "fieldname": "sales_order",
@@ -78,7 +74,8 @@
    "fieldname": "sales_invoice",
    "fieldtype": "Link",
    "label": "Sales Invoice",
-   "options": "Sales Invoice"
+   "options": "Sales Invoice",
+   "read_only": 1
   },
   {
    "fieldname": "current_status",
@@ -93,7 +90,8 @@
   {
    "fieldname": "delivery_address",
    "fieldtype": "Small Text",
-   "label": "Delivery Address"
+   "label": "Delivery Address",
+   "read_only": 1
   },
   {
    "fieldname": "delivery_pin_code",
@@ -103,13 +101,52 @@
   {
    "fieldname": "supplier_address",
    "fieldtype": "Small Text",
-   "label": "Order Pickup Point (Supplier Address}"
+   "label": "Order Pickup Point (Supplier Address}",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_qbne",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_totj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_xeal",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ieul",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_yvrz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ecph",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Delivery Boy Status",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "sales_order_display",
+   "fieldtype": "Read Only",
+   "label": "Sales Order"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-07-01 12:35:11.998685",
+ "modified": "2023-07-04 18:35:08.318851",
  "modified_by": "Administrator",
  "module": "Advika Enterprises",
  "name": "Delivery Boy Status",

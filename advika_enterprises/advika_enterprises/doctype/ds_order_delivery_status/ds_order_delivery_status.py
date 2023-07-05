@@ -361,6 +361,7 @@ def create_delivery_boy_status_on_pi_submit(doc, method):
         delivery_boy_status.purchase_order = purchase_order_name
         delivery_boy_status.purchase_invoice = doc.name
         delivery_boy_status.sales_order = sales_order
+        delivery_boy_status.sales_order_display = sales_order
         delivery_boy_status.sales_invoice = sales_invoice_name
         delivery_boy_status.order_payment_status = order_payment_status
         delivery_boy_status.delivery_pin_code = delivery_pin_code

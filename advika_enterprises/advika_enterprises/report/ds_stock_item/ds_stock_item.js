@@ -30,3 +30,5 @@ frappe.query_reports["DS Stock Item"] = {
         }
     }
 }
+
+

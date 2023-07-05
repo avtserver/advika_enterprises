@@ -10,10 +10,12 @@
  "field_order": [
   "sales_order",
   "sales_invoice",
+  "ds_order_status",
+  "column_break_jzvk",
   "purchase_order",
   "purchase_invoice",
-  "ds_order_status",
   "status_updated_on",
+  "section_break_aovk",
   "comment",
   "status_logs"
  ],
@@ -63,11 +65,19 @@
    "fieldtype": "Link",
    "label": "Sales Invoice",
    "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "column_break_jzvk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_aovk",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-07-01 14:36:57.097741",
+ "modified": "2023-07-04 18:30:45.646165",
  "modified_by": "Administrator",
  "module": "Advika Enterprises",
  "name": "DS Order Delivery Status",
