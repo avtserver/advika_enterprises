@@ -11,6 +11,7 @@
   "delivery_boy",
   "column_break_qbne",
   "current_status",
+  "update_status",
   "column_break_ecph",
   "order_payment_status",
   "section_break_totj",
@@ -141,12 +142,18 @@
    "fieldname": "sales_order_display",
    "fieldtype": "Read Only",
    "label": "Sales Order"
+  },
+  {
+   "fieldname": "update_status",
+   "fieldtype": "Select",
+   "label": "Update Status",
+   "options": "\nItem Received\nOut for delivery\nDelivered"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-07-04 18:35:08.318851",
+ "modified": "2023-07-07 04:15:39.490729",
  "modified_by": "Administrator",
  "module": "Advika Enterprises",
  "name": "Delivery Boy Status",
