@@ -2,7 +2,7 @@
  "creation": "2023-06-22 23:53:48.250458",
  "docstatus": 0,
  "doctype": "Number Card",
- "filters_json": "{\"company\":\"My Advika Pvt Ltd\",\"party\":\"Sandeep Kumar\",\"from_date\":\"2023-06-07\",\"to_date\":\"2023-07-07\"}",
+ "filters_json": "{\"company\":\"My Advika Private Limited\",\"party\":\"Sandeep Kumar\",\"from_date\":\"2023-06-07\",\"to_date\":\"2023-07-07\"}",
  "function": "Count",
  "idx": 0,
  "is_public": 0,
