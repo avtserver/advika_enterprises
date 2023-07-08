@@ -1,12 +1,12 @@
 [
  {
   "address": "",
-  "app_logo": "/files/advika_logo.png",
+  "app_logo": "/assets/advika_enterprises/advika_assets/advika_logo.png",
   "app_name": "My Advika",
   "auto_account_deletion": 72,
   "banner_html": null,
-  "banner_image": "/files/advika_logo2c2d91.png",
-  "brand_html": "<img src='/files/advika_logo2c2d91.png'  style=\"height: 30px\"><img alt=\"\" height=\"50\" src=\"https://i2.wp.com/upload.wikimedia.org/wikipedia/commons/a/a4/India_flag-XL-anim.gif\">",
+  "banner_image": "/assets/advika_enterprises/advika_assets/advika_logo.png",
+  "brand_html": "<img src='/assets/advika_enterprises/advika_assets/advika_logo.png'  style=\"height: 30px\"><img alt=\"\" height=\"50\" src=\"https://i2.wp.com/upload.wikimedia.org/wikipedia/commons/a/a4/India_flag-XL-anim.gif\">",
   "call_to_action": null,
   "call_to_action_url": null,
   "copyright": "My Advika Private Limited",
@@ -139,7 +139,7 @@
     "url": "/refund-policy"
    }
   ],
-  "footer_logo": "/files/advika_logo2c2d91.png",
+  "footer_logo": "/assets/advika_enterprises/advika_assets/advika_logo.png",
   "footer_powered": "Powered By - AV Tutoring Private Limited",
   "footer_template": null,
   "footer_template_values": null,
@@ -160,7 +160,7 @@
   "route_redirects": [],
   "show_account_deletion_link": 0,
   "show_language_picker": 0,
-  "splash_image": "/files/advika_favicon.png",
+  "splash_image": "/assets/advika_enterprises/advika_assets/advika_favicon.png",
   "subdomain": null,
   "title_prefix": "Home | ",
   "top_bar_items": [

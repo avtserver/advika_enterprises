@@ -6,7 +6,7 @@
   "button_shadows": 1,
   "custom": 1,
   "custom_overrides": null,
-  "custom_scss": ".navbar-light{\r\n    // border-bottom:3px solid #cdbd04;\r\n    // background: linear-gradient(to right, rgb(224, 242, 212), rgb(224, 242, 212), rgb(110, 137, 106));\r\n    background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 119, 34));\r\n    // background: #FF7722;\r\n    \r\n// #navbarSupportedContent > ul.ml-auto.navbar-nav > li:nth-child(1) > a{\r\n//     color: white;\r\n// }\r\n    \r\n    \r\n}.web-footer {\r\n    background: #6E896A;\r\n}\r\n",
+  "custom_scss": ".navbar-light{\r\n    // border-bottom:3px solid #cdbd04;\r\n    // background: linear-gradient(to right, rgb(224, 242, 212), rgb(224, 242, 212), rgb(110, 137, 106));\r\n    background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 119, 34));\r\n    // background: #FF7722;\r\n    \r\n// #navbarSupportedContent > ul.ml-auto.navbar-nav > li:nth-child(1) > a{\r\n//     color: white;\r\n// }\r\n    }\r\n.web-footer {\r\n    // background: #6E896A;\r\n    background: #E0F2D4\r\n}\r\n.footer-group-label {\r\n    font-weight: 400;\r\n    color:black;\r\n}\r\n#page-opportunity > div > main > div.page_content > section:nth-child(1) > div > div > div > div > a.btn.btn-lg.btn-dark{\r\n    background: #FF7722;\r\n}\r\n",
   "dark_color": null,
   "docstatus": 0,
   "doctype": "Website Theme",
@@ -16,14 +16,14 @@
   "ignored_apps": [],
   "js": null,
   "light_color": null,
-  "modified": "2023-07-08 16:21:13.310992",
+  "modified": "2023-07-08 19:10:28.765322",
   "module": "Website",
   "name": "myadvika_theme",
   "primary_color": "green",
   "text_color": null,
   "theme": "myadvika_theme",
-  "theme_scss": "$primary: #6E896A;$body-bg: #E0F2D4;$enable-shadows: true;\n$enable-gradients: true;\n$enable-rounded: true;\n\n// Bootstrap Variable Overrides\n\n\n// Import themes from installed apps\n@import \"frappe/public/scss/website.bundle\";\n@import \"erpnext/public/scss/website\";\n\n\n\n// Custom Theme\n.navbar-light{\r\n    // border-bottom:3px solid #cdbd04;\r\n    // background: linear-gradient(to right, rgb(224, 242, 212), rgb(224, 242, 212), rgb(110, 137, 106));\r\n    background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 119, 34));\r\n    // background: #FF7722;\r\n    \r\n// #navbarSupportedContent > ul.ml-auto.navbar-nav > li:nth-child(1) > a{\r\n//     color: white;\r\n// }\r\n    \r\n    \r\n}.web-footer {\r\n    background: #6E896A;\r\n}\r\n\n\n:root {\n\t\n\t--primary: #{$primary};\n\t--primary-color: #{$primary};\n\t\n\t--bg-color: #{$body-bg};\n\t}\n",
-  "theme_url": "/files/website_theme/myadvika_theme_6183e32c.css"
+  "theme_scss": "$primary: #6E896A;$body-bg: #E0F2D4;$enable-shadows: true;\n$enable-gradients: true;\n$enable-rounded: true;\n\n// Bootstrap Variable Overrides\n\n\n// Import themes from installed apps\n@import \"frappe/public/scss/website.bundle\";\n@import \"erpnext/public/scss/website\";\n\n\n\n// Custom Theme\n.navbar-light{\r\n    // border-bottom:3px solid #cdbd04;\r\n    // background: linear-gradient(to right, rgb(224, 242, 212), rgb(224, 242, 212), rgb(110, 137, 106));\r\n    background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 119, 34));\r\n    // background: #FF7722;\r\n    \r\n// #navbarSupportedContent > ul.ml-auto.navbar-nav > li:nth-child(1) > a{\r\n//     color: white;\r\n// }\r\n    }\r\n.web-footer {\r\n    // background: #6E896A;\r\n    background: #E0F2D4\r\n}\r\n.footer-group-label {\r\n    font-weight: 400;\r\n    color:black;\r\n}\r\n#page-opportunity > div > main > div.page_content > section:nth-child(1) > div > div > div > div > a.btn.btn-lg.btn-dark{\r\n    background: #FF7722;\r\n}\r\n\n\n:root {\n\t\n\t--primary: #{$primary};\n\t--primary-color: #{$primary};\n\t\n\t--bg-color: #{$body-bg};\n\t}\n",
+  "theme_url": "/files/website_theme/myadvika_theme_fc4b838b.css"
  },
  {
   "background_color": null,
