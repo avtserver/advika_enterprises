@@ -177,7 +177,6 @@ fixtures = [
 fixtures = ["Customer Group", "Price List"]
 
 fixtures = [
-    {"dt": "Website Theme", "filters": [["name", "=", "myadvika_theme"]]},
     "Color"
 ]
 # fixtures = [
