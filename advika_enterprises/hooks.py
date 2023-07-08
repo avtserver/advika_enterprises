@@ -188,7 +188,10 @@ fixtures = [
     "Website Theme",
     "Web Page",
     "Website Slideshow",
-    "Web Page Block"
+    "Web Page Block",
+    "System Settings",
+    "Website Settings",
+    "Website Route Meta"
 ]
 
 
