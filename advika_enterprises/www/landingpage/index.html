@@ -1,73 +1,103 @@
-
 {% extends "templates/web.html" %}
 
 {% block content %}
 
-<div class="container">
-    <div class="card primary">
-      <h2>Become a Retailer</h2>
-      <p>Sign up to become a retailer and enjoy the benefits of our platform.</p>
-      <a href="/become-a-retailer" class="btn">Become a Retailer</a>
-    </div>
-    
-    <div class="card primary">
-      <h2>Become a Wholesaler</h2>
-      <p>Sign up to become a wholesaler and enjoy the benefits of our platform.</p>
-      <a href="/become-a-wholesaler" class="btn">Become a Wholesaler</a>
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Join Our Network of Retailers and Wholesalers</h1>
+    <p>Discover an exciting opportunity to become a part of our thriving community of retailers and wholesalers. Enjoy exclusive benefits and access to a wide range of products and services.</p>
+    <div class="cta-buttons">
+      <a href="/become-a-retailer" class="cta-button">Become a Retailer</a>
+      <a href="/become-a-wholesaler" class="cta-button">Become a Wholesaler</a>
     </div>
   </div>
-  
-  <div class="cta-container primary">
-    <h2>Explore Our Products & Services</h2>
-    <p>Discover the variety of products and services we offer.</p>
-    <a href="/all-products" class="btn">Explore All Products</a>
-  </div>
+</section>
 
-  <style>
-    .container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap; /* Added flex-wrap property to wrap cards to the next line if needed */
-    }
+<!-- Content Section -->
+<section class="content">
+  <div class="container">
+    <h2>Why Join Us?</h2>
+    <div>
+    <p>At Advika Enterprises, we offer a unique opportunity for individuals and businesses to become retailers or wholesalers. Here are some reasons why you should join us:</p>
+    <ul>
+      <li>Access to a wide range of high-quality products</li>
+      <li>Competitive pricing and attractive margins</li>
+      <li>Dedicated support and training</li>
+      <li>Marketing and promotional assistance</li>
+      <li>Opportunity to grow your business and reach new customers</li>
+    </ul>
+    <p>Don't miss out on this exciting opportunity to be a part of our network. Sign up today and start your journey as a retailer or wholesaler with Advika Enterprises.</p>
+  </div></div>
+</section>
 
-    .card {
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        transition: 0.3s;
-        width: 40%;
-        padding: 20px;
-        margin: 20px;
-        text-align: center;
-    }
+<style>
+  /* Hero Section Styles */
+  .hero {
+    background-image: url('/assets/advika_enterprises/images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .card:hover {
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    }
+  .hero-content {
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+  }
 
-    .btn {
-        background-color: blue;
-        color: white;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-    }
+  .hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
 
-    .primary {
-        color: #007bff; /* Replace with your primary color */
-    }
+  .hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
 
-    .primary .btn {
-        background-color: #007bff; /* Replace with your primary color */
-        color: #fff;
-    }
+  .cta-buttons {
+    display: flex;
+    justify-content: center;
+  }
 
-    .cta-container {
-        text-align: center; /* Center align the CTA content */
-        margin-top: 40px; /* Add some spacing from the cards */
-    }
+  .cta-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+  }
+
+  /* Content Section Styles */
+  /* .content {
+    padding: 40px 0;
+  }
+
+  .content .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  } */
+
+  .content ul {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .content ul li {
+    margin-bottom: 10px;
+  }
 </style>
-
-
-
 
 {% endblock %}

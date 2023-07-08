@@ -366,6 +366,7 @@ def create_delivery_boy_status_on_pi_submit(doc, method):
         delivery_boy_status.order_payment_status = order_payment_status
         delivery_boy_status.delivery_pin_code = delivery_pin_code
         delivery_boy_status.current_status = 'Order Ready for Pickup'
+        delivery_boy_status.update_status = ' '
 
         # Remove HTML tags from the address fields
         clean_shipping_address = re.sub(r'<.*?>', '', doc.shipping_address_display)
