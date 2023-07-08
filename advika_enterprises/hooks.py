@@ -48,7 +48,7 @@ app_include_js = "/assets/advika_enterprises/js/custom_sales_order_script.js"
 
 # application home page (will override Website Settings)
 # home_page = "/home"
-
+home_page = "/homepage"
 # website user home page (by Role)
 # role_home_page = {
 # 	"Role": "home_page"
@@ -177,8 +177,20 @@ fixtures = [
 fixtures = ["Customer Group", "Price List"]
 
 fixtures = [
-    {"dt": "Website Theme", "filters": [["name", "=", "myadvika_theme"]]}
+    {"dt": "Website Theme", "filters": [["name", "=", "myadvika_theme"]]},
+    "Color"
 ]
+# fixtures = [
+#     {"dt": "Web Page", "filters": [["name", "=", "homepage"]]},
+#     {"dt": "Website Slideshow", "filters": [["name", "=", "homepage"]]},
+#     {"dt": "Web Page Block", "filters": [["parent", "=", "homepage"]]}
+# ]
+fixtures = [
+    "Web Page",
+    "Website Slideshow",
+    "Web Page Block"
+]
+
 
 
 # fixtures = [
