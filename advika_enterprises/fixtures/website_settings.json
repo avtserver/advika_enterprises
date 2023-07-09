@@ -151,7 +151,7 @@
   "home_page": "homepage",
   "indexing_authorization_code": null,
   "indexing_refresh_token": null,
-  "modified": "2023-07-08 18:44:36.550671",
+  "modified": "2023-07-09 18:02:12.483182",
   "name": "Website Settings",
   "navbar_search": 1,
   "navbar_template": null,
@@ -162,7 +162,7 @@
   "show_language_picker": 0,
   "splash_image": "/assets/advika_enterprises/advika_assets/advika_favicon.png",
   "subdomain": null,
-  "title_prefix": "Home | ",
+  "title_prefix": "",
   "top_bar_items": [
    {
     "icon": null,
@@ -172,8 +172,41 @@
     "parent_label": null,
     "parentfield": "top_bar_items",
     "parenttype": "Website Settings",
-    "right": 1,
+    "right": 0,
     "url": "/opportunity"
+   },
+   {
+    "icon": null,
+    "label": "All Prodcuts",
+    "open_in_new_tab": 0,
+    "parent": "Website Settings",
+    "parent_label": null,
+    "parentfield": "top_bar_items",
+    "parenttype": "Website Settings",
+    "right": 0,
+    "url": null
+   },
+   {
+    "icon": null,
+    "label": "Products",
+    "open_in_new_tab": 0,
+    "parent": "Website Settings",
+    "parent_label": "All Prodcuts",
+    "parentfield": "top_bar_items",
+    "parenttype": "Website Settings",
+    "right": 0,
+    "url": "/all-products"
+   },
+   {
+    "icon": null,
+    "label": "Shop by Category",
+    "open_in_new_tab": 0,
+    "parent": "Website Settings",
+    "parent_label": "All Prodcuts",
+    "parentfield": "top_bar_items",
+    "parenttype": "Website Settings",
+    "right": 0,
+    "url": "/shop-by-category"
    }
   ],
   "website_theme": "myadvika_theme",
