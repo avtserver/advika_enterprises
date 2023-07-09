@@ -1,0 +1,12 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Custom HTML Block",
+  "html": "<div class=\"card\">\n  <a href=\"/app/dashboard-view/DS%20Supplier%20Dashboard\">\n    <i class=\"fas fa-chart-line\"></i>\n    <span>Dashboard</span>\n  </a>\n</div>\n",
+  "modified": "2023-07-09 15:26:17.803371",
+  "name": "Supplier Dashboard",
+  "roles": [],
+  "script": "document.querySelector('.card').addEventListener('click', function() {\n  window.location.href = this.children[0].href;\n});\n",
+  "style": ".card {\n  background: #4B6A9B; /* deep blue */\n  width: 100px;\n  height: 100px;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  text-align: center;\n  transition: all 0.3s ease;\n  border-radius: 10px;\n  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);\n  color: white;\n}\n\n.card a {\n  color: inherit;\n  text-decoration: none;\n  font-size: 14px;\n}\n\n.card a i {\n  font-size: 24px;\n  margin-bottom: 5px;\n}\n\n.card:hover {\n  background: #3B5786; /* slightly darker blue */\n  cursor: pointer;\n  transform: translateY(-5px); /* slight upward movement */\n  box-shadow: 0px 5px 20px rgba(0,0,0,0.3); /* deeper shadow */\n}\n"
+ }
+]
