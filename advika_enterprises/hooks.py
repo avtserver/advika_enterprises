@@ -191,15 +191,6 @@ fixtures = [
     # "Web Page Block",
     "System Settings",
     "Website Settings",
-    # "Website Route Meta"
-    "Item",
-    "Item Group",
-    "Item Price",
-    "Website Item Group",
-    "Website Item",
-    "E Commerce Settings",
-    "Razorpay Settings",
-    "Payment Gateway",
     "Custom HTML Block",
 
 
