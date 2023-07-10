@@ -192,6 +192,8 @@ fixtures = [
     "System Settings",
     "Website Settings",
     "Custom HTML Block",
+    "Role",
+    "Portal Settings"
 
 
 
