@@ -39,7 +39,7 @@ from frappe import _
 from frappe.utils import validate_email_address
 
 @frappe.whitelist(allow_guest=True)
-def sign_up(email, full_name, verify_terms, mobile_number, customer_group):
+def sign_up(email, full_name, verify_terms, mobile_number, customer_group, gst_category=None, gstin=None, pan=None):
     # Validate inputs
     if not (email and full_name and mobile_number and verify_terms):
         frappe.throw(_("Please fill all required fields"))
@@ -67,6 +67,10 @@ def sign_up(email, full_name, verify_terms, mobile_number, customer_group):
         customer.customer_name = full_name
         customer.customer_type = "Individual"
         customer.customer_group = customer_group
+        if customer_group in ["Retailer", "Wholesaler"]:
+            customer.gst_category = gst_category
+            customer.gstin = gstin
+            customer.pan = pan
         customer.save(ignore_permissions=True)
         
         return user.name
@@ -75,4 +79,6 @@ def sign_up(email, full_name, verify_terms, mobile_number, customer_group):
 
 @frappe.whitelist(allow_guest=True)
 def get_customer_groups():
-    return frappe.get_all('Customer Group', filters = {}, fields = ['name'])
+    allowed_groups = ["Individual", "Retailer", "Wholesaler"]
+    customer_groups = frappe.get_all("Customer Group", filters={"name": ["in", allowed_groups]}, fields=["name"])
+    return customer_groups

@@ -102,7 +102,6 @@
         return false;
     }
 </script> -->
-
 <form class="signup-form" role="form">
     <div class="page-card-body">
         <div class="form-group">
@@ -127,6 +126,35 @@
                 <option value="" disabled selected>{{ _("Select a Customer Group") }}</option>
             </select>
         </div>
+
+        <!-- GST Category field -->
+        <div class="form-group" id="signup-gst-category-container" style="display: none;">
+            <label class="form-label sr-only" for="signup-gst-category">{{ _("GST Category") }}</label>
+            <select id="signup-gst-category" class="form-control">
+                <option value="" disabled selected>{{ _("Select a GST Category") }}</option>
+                <option value="Registered Regular">{{ _("Registered Regular") }}</option>
+                <option value="Registered Composition">{{ _("Registered Composition") }}</option>
+                <option value="Unregistered">{{ _("Unregistered") }}</option>
+                <option value="SEZ">{{ _("SEZ") }}</option>
+                <option value="Overseas">{{ _("Overseas") }}</option>
+                <option value="Deemed Export">{{ _("Deemed Export") }}</option>
+                <option value="UIN Holders">{{ _("UIN Holders") }}</option>
+                <option value="Tax Deductor">{{ _("Tax Deductor") }}</option>
+            </select>
+        </div>
+
+        <!-- GSTIN field -->
+        <div class="form-group" id="signup-gstin-container" style="display: none;">
+            <label class="form-label sr-only" for="signup-gstin">{{ _("GSTIN") }}</label>
+            <input type="text" id="signup-gstin" class="form-control" placeholder="{{ _('GSTIN') }}">
+        </div>
+
+        <!-- PAN field -->
+        <div class="form-group" id="signup-pan-container" style="display: none;">
+            <label class="form-label sr-only" for="signup-pan">{{ _("PAN") }}</label>
+            <input type="text" id="signup-pan" class="form-control" placeholder="{{ _('PAN') }}">
+        </div>
+
 
         <div class="form-group">
             <div class="checkbox">
@@ -163,7 +191,17 @@
                 $('#signup-customer-group').val('Individual');
             }
         });
-        
+        $('#signup-customer-group').change(function() {
+            if ($(this).val() === "Retailer" || $(this).val() === "Wholesaler") {
+                $('#signup-gst-category-container').show();
+                $('#signup-gstin-container').show();
+                $('#signup-pan-container').show();
+            } else {
+                $('#signup-gst-category-container').hide();
+                $('#signup-gstin-container').hide();
+                $('#signup-pan-container').hide();
+            }
+        });
         $(".signup-form").on("submit", (e) => {
             signup(e);
         });
@@ -175,6 +213,9 @@
         const full_name = frappe.utils.xss_sanitise(($("#signup_fullname").val() || "").trim());
         const mobile_number = ($("#signup_mobile_number").val() || "").trim();
         const customer_group = $('#signup-customer-group').val();
+        const gst_category = $('#signup-gst-category').val();
+        const gstin = $('#signup-gstin').val();
+        const pan = $('#signup-pan').val();
 
         if (!email || !validate_email(email) || !full_name || !mobile_number || !customer_group) {
             frappe.msgprint({
@@ -192,7 +233,10 @@
                 "full_name": full_name,
                 "verify_terms": $("#signup-terms").prop("checked") ? 1 : 0,
                 "mobile_number": mobile_number,
-                "customer_group": customer_group
+                "customer_group": customer_group,
+                "gst_category": gst_category,
+                "gstin": gstin,
+                "pan": pan
             },
             callback: function(response) {
                 if (response.exc) {
@@ -212,6 +256,9 @@
                     $('#signup_mobile_number').val('');
                     $('#signup-terms').prop('checked', false);
                     $('#signup-customer-group').val('');
+                    $('#signup-gst-category').val('');
+                    $('#signup-gstin').val('');
+                    $('#signup-pan').val('');
                 }
             },
             error: function() {
