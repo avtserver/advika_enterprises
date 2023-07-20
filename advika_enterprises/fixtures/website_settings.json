@@ -199,17 +199,6 @@
    },
    {
     "icon": null,
-    "label": "Products",
-    "open_in_new_tab": 0,
-    "parent": "Website Settings",
-    "parent_label": "All Prodcuts",
-    "parentfield": "top_bar_items",
-    "parenttype": "Website Settings",
-    "right": 0,
-    "url": "/all-products"
-   },
-   {
-    "icon": null,
     "label": "Shop by Category",
     "open_in_new_tab": 0,
     "parent": "Website Settings",
