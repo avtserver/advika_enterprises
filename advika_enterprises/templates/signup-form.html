@@ -159,6 +159,8 @@
             callback: function(r) {
                 let options = r.message.map(group => `<option value="${group.name}">${group.name}</option>`).join("");
                 $('#signup-customer-group').append(options);
+                // Set default value for the customer group dropdown
+                $('#signup-customer-group').val('Individual');
             }
         });
         
