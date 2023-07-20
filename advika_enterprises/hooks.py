@@ -196,7 +196,8 @@ fixtures = [
     "Website Settings",
     "Custom HTML Block",
     "Role",
-    "Portal Settings"
+    "Portal Settings",
+    "Selling Settings"
 
 
 
