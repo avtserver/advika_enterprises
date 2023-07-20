@@ -188,7 +188,7 @@ fixtures = [
 #     {"dt": "Web Page Block", "filters": [["parent", "=", "homepage"]]}
 # ]
 fixtures = [
-    "Website Theme",
+    # "Website Theme",
     "Web Page",
     "Website Slideshow",
     # "Web Page Block",
