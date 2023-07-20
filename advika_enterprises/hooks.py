@@ -17,6 +17,9 @@ app_include_js = "/assets/advika_enterprises/js/custom_sales_order_script.js"
 # add one more js
 # app_include_js = "/assets/advika_enterprises/js/website_script.js"
 # app_include_js = ["/assets/advika_enterprises/js/custom_sales_order_script.js", "/assets/advika_enterprises/js/signup.js"]
+# website_route_rules = [
+#     {"from_route": "/signup", "to_route": "advika_enterprises.www.signup.index"}
+# ]
 
 
 
@@ -321,3 +324,13 @@ fixtures = [
 # auth_hooks = [
 #	"advika_enterprises.auth.validate"
 # ]
+# signup_form_template = "advika_enterprises.plugins.show_custom_signup"
+# override_whitelisted_methods = {
+#     "frappe.core.doctype.user.user.sign_up": "advika_enterprises.overrides.user.sign_up"
+# }
+override_whitelisted_methods = {
+    "frappe.core.doctype.user.user.sign_up": "advika_enterprises.overrides.user.sign_up"
+}
+
+# Custom Signup form
+signup_form_template = "advika_enterprises.plugins.show_custom_signup"
